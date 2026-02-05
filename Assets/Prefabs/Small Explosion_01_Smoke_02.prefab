@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8148289945337354020}
   - component: {fileID: 437041251633064780}
+  - component: {fileID: -7213616577378820744}
   m_Layer: 0
   m_Name: Small Explosion_01_Smoke_02
   m_TagString: Untagged
@@ -84,3 +85,15 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &-7213616577378820744
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1037461401729265474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb20c551cb4080341928d546b2c73213, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

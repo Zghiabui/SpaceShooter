@@ -4,16 +4,26 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    public float flySpeed = 5f; 
+    public float flySpeed = 5f;
+    public int damage = 1;
 
     void Update()
     {
-        // Lấy vị trí hiện tại
         var newPosition = transform.position;
-        // Cộng thêm vào trục Y (bay lên)
         newPosition.y += Time.deltaTime * flySpeed;
-        // Gán lại vị trí mới
         transform.position = newPosition;
 
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        var enemy = collision.GetComponent<EnemyHealth>();
+
+        if (enemy != null)
+        {
+            enemy.TakeDamage(damage);
+        }
+
+        Destroy(gameObject);
     }
 }
