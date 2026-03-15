@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 
 
@@ -13,7 +14,8 @@ public class BattleFlow : MonoBehaviour
 
     private void Start()
     {
-        gameOverUI.SetActive(false); 
+        gameOverUI.SetActive(false);
+        gameWinUI.SetActive(false);
         playerHealth.onDead += OnGameOver; 
     }
 
@@ -38,4 +40,8 @@ public class BattleFlow : MonoBehaviour
         playerHealth.gameObject.SetActive(false);
     }
 
+    public void ReturnToMainMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
 }
